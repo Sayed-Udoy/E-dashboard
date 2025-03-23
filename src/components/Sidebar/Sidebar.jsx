@@ -55,13 +55,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <FiMenu />
       </button>
 
-      <ul className="space-y-10">
+      <ul className="space-y-5">
         {sidebarItems.map((item,idx) => {
           return (
             <li
             onClick={()=>setIsActive(idx)}
               key={item.name}
-              className={`flex   px-2 py-2.5 rounded-lg  items-center gap-2 cursor-pointer ${idx === isActive ? "text-primary2 bg-secondary " : "text-grayText"} ` }
+              className={`flex font-medium px-2 py-2.5 rounded-lg  items-center gap-2 cursor-pointer hover:bg-secondary hover:text-primary1 transition-all duration-200 ${idx === isActive ? "text-primary2 bg-secondary " : "text-grayText"} ` }
             >
               {item.icon} {item.name}
             </li>

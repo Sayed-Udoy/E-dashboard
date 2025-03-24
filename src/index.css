@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-@theme {
+/* @theme {
   --breakpoint-tablet: 40rem;
   --breakpoint-laptop: 64rem;
   --breakpoint-desktop: 80rem;
-}
+} */
 @theme {
   --color-primary1:#171821;
   --color-primary2:#21222D;
@@ -14,4 +14,8 @@
 .container{
   max-width: 1240px;
   margin: 0 auto;
+}
+.hide-scrollbar {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }

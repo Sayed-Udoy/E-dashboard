@@ -1,62 +1,82 @@
 import React from "react";
 import WrapperDiv from "./WrapperDiv";
 import ContentHeader from "../ContentHeader";
-import { SalesData } from "../../data/index";
 import Graph from "../../assets/Graph.png";
+import { topProductsData } from "../../data/index";
 
-const SalesDetails = () => {
+const ProductsDetails = () => {
+  const tableHead = ["#", "Name", "Popularity", "Sales"];
   return (
     <div className="p-4">
-      <ContentHeader title="Today’s Sales" des="Sales Summary" />
-      <div className=" grid grid-cols-2 lg:grid-cols-4 gap-5">
-        {SalesData &&
-          SalesData.map((data) => {
+      <ContentHeader title="Top Products" />
+      <div className="w-full">
+        <div>
+          <div className="flex justify-between px-6 items-center">
+            {tableHead.map((h, idx) => (
+              <h1 className="text-[13px] font-medium text-grayText" key={idx}>
+                {h}
+              </h1>
+            ))}
+          </div>
+          {topProductsData.map((t, idx) => {
+            const color = () => t.color;
             return (
-              <div key={data.id} className={`bg-primary1 p-4 rounded-md`}>
-                <img src={data.icon} alt="" />
-                <div className="mt-2">
-                  <p className="text-[15px] font-semibold text-white/80 pb-1">
-                    {data.count}
-                  </p>
-                  <h1 className="text-white/80 text-[10px] md:text-[12px] font-medium">
-                    {data.title}
-                  </h1>
-                  <p
-                    style={{ color: data.color }}
-                    className={`text-[8px] md:text-[10px] font-medium`}
-                  >
-                    {data.des}
-                  </p>
+              <div
+                key={t.id}
+                className=" text-white/80 w-full flex items-center justify-between gap-3 text-center text-[10px] font-medium px-6 border-b border-grayText/20"
+              >
+                <span className="py-3">{idx + 0}</span>
+                <p className="w-[50%]" >{t.name}</p>
+                <div className="relative max-w-[25%] w-full  h-[3px] rounded-full bg-grayText">
+                  <div
+                    style={{ background: t.color }}
+                    className={`absolute top-0 left-0 ${
+                      t.priority >= 20 && "w-[25%]"
+                    } ${t.priority >= 50 && "w-[50%]"} ${
+                      t.priority >= 80 && "w-[75%]"
+                    } ${t.priority >= 90 && "w-[100%]"} rounded-full h-[3px]`}
+                  />
                 </div>
+                <button
+                  className={`py-1 px-2 rounded-sm text-[${color()}]`}
+                  style={{ border: `${t.color} 1px solid` }}
+                >
+                  {t.priority}%
+                </button>
               </div>
             );
           })}
+        </div>
       </div>
     </div>
   );
 };
 
-const SalesChart = () => {
+const CustomerFulfilment = () => {
   return (
     <div className="flex-0.2 p-4">
-      <ContentHeader title="Level" />
+      <ContentHeader title="Customer Fulfilment" />
       <div className="w-full h-[120px]">
         <img className="w-full h-full" src={Graph} alt="" />
       </div>
-      <div className="lg:flex lg:items-center justify-between pt-2 mt-2">
+      <div className="lg:flex lg:items-center justify-between pt-2 mt-2 border-t border-grayText/20 ">
         <div>
-          <button className="flex items-center lg:justify-center gap-2 text-grayText w-full">
+          <button className="flex items-center text-[10px] font-medium lg:justify-center gap-2 text-grayText w-full">
             <span className="h-2 w-2 rounded-full bg-secondary"></span>Last
             Month
           </button>
-          <p>$4,087</p>
+          <p className="text-center text-[10px] font-medium text-white/70">
+            $4,087
+          </p>
         </div>
         <div>
-          <button className="flex items-center lg:justify-center gap-2 text-grayText w-full">
+          <button className="flex items-center text-[10px] font-medium lg:justify-center gap-2 text-grayText w-full">
             <span className="h-2 w-2 rounded-full bg-secondary"></span>This
             Month
           </button>
-          <p>$5,506</p>
+          <p className="text-center text-[10px] font-medium text-white/70">
+            $5,506
+          </p>
         </div>
       </div>
     </div>
@@ -68,10 +88,10 @@ const TopProducts = () => {
     <div>
       <WrapperDiv>
         <div className=" flex-[1.5] bg-primary2 rounded-md">
-          <SalesDetails />
+          <ProductsDetails />
         </div>
         <div className=" flex-[0.5] bg-primary2 rounded-md">
-          <SalesChart />
+          <CustomerFulfilment />
         </div>
       </WrapperDiv>
     </div>

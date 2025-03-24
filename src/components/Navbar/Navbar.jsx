@@ -2,11 +2,15 @@ import { CiSearch } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import User from "../../assets/user.png"
 import { FaAngleDown } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 
-const Navbar = () => {
+const Navbar = ({toggleSidebar}) => {
   return (
-    <nav className="bg-primary1 shadow-md py-4 ">
+    <nav className="bg-primary1 shadow-md py-4">
       <div className="flex justify-between gap-5 items-center" >
+      <button onClick={toggleSidebar} className="text-xl mb-4 md:hidden cursor-pointer">
+        <FiMenu className="text-white text-2xl" />
+      </button>
         <div  className="flex bg-primary2 items-center text-grayText justify-center  gap-2 py-2.5 px-2.5 min-w-[250px] max-w-xl rounded-md w-[100%] " >
           <CiSearch className="text-xl" />
           <input type="text" placeholder="Search for something" className="bg-transparent text-gray-300 border-none w-full outline-none" />

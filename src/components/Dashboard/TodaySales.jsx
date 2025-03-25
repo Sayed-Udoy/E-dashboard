@@ -55,10 +55,10 @@ const TodaySales = () => {
   return (
     <div>
       <WrapperDiv>
-        <div className=" flex-[1.5] bg-primary2 rounded-md">
+        <div className="flex-[1.3] lg:flex-[1.5] bg-primary2 rounded-md">
           <SalesDetails />
         </div>
-        <div className=" flex-[0.5] bg-primary2 rounded-md">
+        <div className="flex-[0.7] lg:flex-[0.5] bg-primary2 rounded-md">
           <SalesChart />
         </div>
       </WrapperDiv>

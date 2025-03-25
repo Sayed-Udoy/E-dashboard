@@ -59,7 +59,7 @@ const CustomerFulfilment = () => {
       <div className="w-full h-[120px]">
         <img className="w-full h-full" src={Graph} alt="" />
       </div>
-      <div className="lg:flex lg:items-center justify-between pt-2 mt-2 border-t border-grayText/20 ">
+      <div className="flex items-center lg:flex lg:items-center justify-between pt-2 mt-2 border-t border-grayText/20 ">
         <div>
           <button className="flex items-center text-[10px] font-medium lg:justify-center gap-2 text-grayText w-full">
             <span className="h-2 w-2 rounded-full bg-secondary"></span>Last
@@ -87,10 +87,10 @@ const TopProducts = () => {
   return (
     <div>
       <WrapperDiv>
-        <div className=" flex-[1.5] bg-primary2 rounded-md">
+        <div className="flex-[1.3] lg:flex-[1.5] bg-primary2 rounded-md">
           <ProductsDetails />
         </div>
-        <div className=" flex-[0.5] bg-primary2 rounded-md">
+        <div className="flex-[0.7] lg:flex-[0.5] bg-primary2 rounded-md">
           <CustomerFulfilment />
         </div>
       </WrapperDiv>

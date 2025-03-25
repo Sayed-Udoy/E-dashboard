@@ -12,52 +12,39 @@ import { IoMdClose } from "react-icons/io";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { LuHistory } from "react-icons/lu";
 import { PiSignOutFill } from "react-icons/pi";
+import { Link } from "react-router";
 
 const sidebarItems = [
   {
     name: "Dashboard",
     icon: <MdDashboard />,
+    link:"/dashboard"
   },
   {
     name: "Profile",
     icon: <FaUser />,
-  },
-  {
-    name: "Leaderboard",
-    icon: <MdOutlineLeaderboard />,
+    link:"/profile"
   },
   {
     name: "Order",
     icon: <AiOutlineShoppingCart />,
+    link:"/order"
   },
   {
     name: "Product",
     icon: <IoBag />,
+    link:"/product"
   },
   {
     name: "Sales Report",
     icon: <FaChartLine />,
-  },
-  {
-    name: "Message",
-    icon: <FiMessageCircle />,
+    link:"/sales"
   },
 
   {
-    name: "Settings",
-    icon: <IoSettingsSharp />,
-  },
-  {
-    name: "Favourite",
-    icon: <FaStarHalfAlt />,
-  },
-  {
-    name: "History",
-    icon: <LuHistory />,
-  },
-  {
     name: "Signout",
     icon: <PiSignOutFill />,
+    link:"/signout"
   },
 ];
 
@@ -70,7 +57,8 @@ const Sidebar = ({ toggleSidebar }) => {
       <ul className="space-y-3 mt-5 md:mt-0">
         {sidebarItems.map((item, idx) => {
           return (
-            <li
+            <Link
+            to={item.link}
               onClick={() => setIsActive(idx)}
               key={item.name}
               className={`flex font-medium px-2 py-2.5 rounded-lg  items-center gap-2 cursor-pointer hover:bg-secondary hover:text-primary1 transition-all duration-200 ${
@@ -80,7 +68,7 @@ const Sidebar = ({ toggleSidebar }) => {
               } `}
             >
               {item.icon} {item.name}
-            </li>
+            </Link>
           );
         })}
       </ul>

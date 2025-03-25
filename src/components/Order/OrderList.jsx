@@ -14,7 +14,7 @@ const OrderListHeader = () => {
       <div className="flex-1">Customer</div>
       <div className="flex-1">Payment</div>
       <div className="flex-1">Total</div>
-      <div className="flex-1">Delivary</div>
+      <div className="flex-1">Delivery</div>
       <div className="flex-1">Action</div>
     </div>
   );
@@ -23,13 +23,15 @@ const OrderListHeader = () => {
 const OrderList = () => {
   return (
     <section className="text-white bg-primary2/10 overflow-x-auto cursor-pointer hide-scrollbar w-[100p0x]">
-        <div className="min-w-[700px]" >
-
-      <OrderListHeader />
-        </div>
+      <div className="min-w-[700px]">
+        <OrderListHeader />
+      </div>
       <div className="mt-5 space-y-2 text-white/70 min-w-[700px] font-medium text-[14px]">
         {ordersList.map((od, idx) => (
-          <div key={od.id} className="bg-primary1 flex items-center flex-nowrap gap-5 border-t border-b border-grayText/10 py-2 justify-between px-2 text-center">
+          <div
+            key={od.id}
+            className="bg-primary1 flex items-center flex-nowrap gap-5 border-t border-b border-grayText/10 py-2 justify-between px-2 text-center"
+          >
             <div className="flex-1 flex items-center gap-2 justify-center">
               <input className="w-3 h-3" type="checkbox" />
               <h2>#{idx + 1}</h2>
@@ -50,8 +52,12 @@ const OrderList = () => {
             <div className="flex-1">{od.total}</div>
             <div className="flex-1">N/A</div>
             <div className="flex-1 text-xl flex justify-center gap-5">
-              <button className="cursor-pointer" ><MdDeleteOutline className="text-red-500/70" /></button>
-              <button className="cursor-pointer"><CiEdit className="text-green-500" /></button>
+              <button className="cursor-pointer">
+                <MdDeleteOutline className="text-red-500/70" />
+              </button>
+              <button className="cursor-pointer">
+                <CiEdit className="text-green-500" />
+              </button>
             </div>
           </div>
         ))}

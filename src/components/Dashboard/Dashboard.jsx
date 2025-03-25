@@ -1,7 +1,6 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
-import Mainboard from "./Mainboard";
 import { Outlet } from "react-router";
+import Navbar from "../Navbar/Navbar";
 
 const Dashboard = ({ toggleSidebar }) => {
   return (

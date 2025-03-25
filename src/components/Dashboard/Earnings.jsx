@@ -5,7 +5,7 @@ import { SalesData } from "../../data/index";
 import Graph2 from "../../assets/Graph2.png";
 import Percentage from "../../assets/Percentage.png";
 
-const VisitorEnsight = () => {
+const VisitorInsight = () => {
   return (
     <div className="p-4">
       <ContentHeader title="Visitor Insights" />
@@ -38,7 +38,7 @@ const Earnings = () => {
     <div>
       <WrapperDiv reverse>
         <div className=" flex-[1] bg-primary2 rounded-md">
-          <VisitorEnsight />
+          <VisitorInsight />
         </div>
         <div className=" flex-[0.5] bg-primary2 rounded-md">
           <EarningsRate />

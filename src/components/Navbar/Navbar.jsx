@@ -7,14 +7,14 @@ import { FiMenu } from "react-icons/fi";
 const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="bg-primary1 shadow-md py-4">
-      <div className="flex justify-between gap-5 items-center">
+      <div className="flex justify-between gap-2 items-center">
         <button
           onClick={toggleSidebar}
-          className="text-xl mb-4 md:hidden cursor-pointer"
+          className="md:hidden cursor-pointer"
         >
-          <FiMenu className="text-white text-2xl" />
+          <FiMenu className="text-white/50 text-2xl" />
         </button>
-        <div className="flex bg-primary2 items-center text-grayText justify-center  gap-2 py-2.5 px-2.5 min-w-[250px] max-w-xl rounded-md w-[100%] ">
+        <div className="flex bg-primary2 items-center text-grayText justify-center gap-2 py-1.5 px-1.5 md:py-2.5 md:px-2.5 min-w-[200px] max-w-xl rounded-md w-[100%] ">
           <CiSearch className="text-xl" />
           <input
             type="text"

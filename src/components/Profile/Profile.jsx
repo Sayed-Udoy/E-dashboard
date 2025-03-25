@@ -1,9 +1,10 @@
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
-import { FaPinterestSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
-import { FaSquareTwitter } from "react-icons/fa6";
-import { FaInstagramSquare } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagramSquare,
+  FaPinterestSquare,
+} from "react-icons/fa";
+import { FaLinkedin, FaSquareTwitter } from "react-icons/fa6";
 
 const soacialLinks = [
   {
@@ -44,7 +45,7 @@ const data = [
 const MainProfile = () => {
   return (
     <div>
-      <div className="flex items-center justify-center flex-col  ">
+      <div className="flex items-center justify-center flex-col  pt-5">
         <div className="w-[200px] h-[200px] rounded-full overflow-hidden">
           <img
             className="w-full h-full "
@@ -57,7 +58,7 @@ const MainProfile = () => {
             Sayed Udoy
           </h1>
           <h2 className="mt-3 text-lg">
-            Frontend webdelever at habluprogrammer
+            Frontend Web Developer at Hablu Programmer
           </h2>
           <p className="max-w-[600px] text-[14px] mt-2 text-grayText">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel

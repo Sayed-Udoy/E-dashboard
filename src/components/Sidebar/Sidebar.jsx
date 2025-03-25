@@ -18,7 +18,7 @@ const sidebarItems = [
   {
     name: "Dashboard",
     icon: <MdDashboard />,
-    link:"/dashboard"
+    link:"/"
   },
   {
     name: "Profile",

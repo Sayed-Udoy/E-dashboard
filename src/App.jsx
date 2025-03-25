@@ -13,7 +13,7 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => setIsOpen(!isOpen);
   return (
-    <div className="bg-primary2">
+    <div className="bg-primary1">
       <div className="container bg-primary1 flex mx-auto">
         <div
           className={`absolute top-0 transition-all duration-300 ${
@@ -23,8 +23,9 @@ const App = () => {
           <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         </div>
         <Routes>
+          <Route path="/" element={<Dashboard />} toggleSidebar={toggleSidebar} />
           <Route path="/" element={<Dashboard toggleSidebar={toggleSidebar}  />}>
-            <Route path="/dashboard" index element={<Mainboard />} />
+            <Route path="/" index element={<Mainboard />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/order" element={<Order />} />
             <Route path="/order" element={<Order />} />

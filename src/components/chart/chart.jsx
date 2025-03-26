@@ -25,7 +25,7 @@ const BarChart = () => {
         label: "Dark Section",
         data: [70, 90, 70, 70, 55, 35], 
         backgroundColor: "#2B2B36",
-        hoverBackgroundColor: "#F2C8ED", // 🔥 Hover color red
+        hoverBackgroundColor: "#F2C8ED", 
         borderRadius: 10, 
         barThickness: 25, 
       },

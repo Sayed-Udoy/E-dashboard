@@ -107,7 +107,7 @@ const MonthlyLineChart = () => {
   };
 
   return (
-    <div className="w-full h-96 p-4  rounded-2xl shadow-lg">
+    <div className="w-full rounded-2xl shadow-lg">
       <Line ref={chartRef} data={data} options={options} />
     </div>
   );

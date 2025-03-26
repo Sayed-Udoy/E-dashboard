@@ -117,7 +117,7 @@ const ChartComponent = () => {
 
   return (
     <div className="w-full">
-      <Line ref={chartRef} data={data} options={options} />
+      <Line ref={chartRef} data={data} options={options} className="w-full" />
     </div>
   );
 };

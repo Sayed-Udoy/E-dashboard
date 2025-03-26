@@ -27,7 +27,7 @@ const ProductsDetails = () => {
                 className=" text-white/80 w-full flex items-center justify-between gap-3 text-center text-[10px] font-medium px-6 border-b border-grayText/20"
               >
                 <span className="py-3">{idx + 0}</span>
-                <p className="w-[50%]" >{t.name}</p>
+                <p className="w-[50%]">{t.name}</p>
                 <div className="relative max-w-[25%] w-full  h-[3px] rounded-full bg-grayText">
                   <div
                     style={{ background: t.color }}
@@ -53,10 +53,10 @@ const ProductsDetails = () => {
   );
 };
 
-const CustomerFulfilment = () => {
+const CustomerFulfillment = () => {
   return (
     <div className="flex-0.2 p-4">
-      <ContentHeader title="Customer Fulfilment" />
+      <ContentHeader title="Customer Fulfillment" />
       <div className="w-full h-[120px]">
         {/* <img className="w-full h-full" src={Graph} alt="" /> */}
         <LineGraph />
@@ -93,7 +93,7 @@ const TopProducts = () => {
           <ProductsDetails />
         </div>
         <div className="flex-[0.7] lg:flex-[0.5] bg-primary2 rounded-md">
-          <CustomerFulfilment />
+          <CustomerFulfillment />
         </div>
       </WrapperDiv>
     </div>

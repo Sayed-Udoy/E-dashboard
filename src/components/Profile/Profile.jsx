@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { FaLinkedin, FaSquareTwitter } from "react-icons/fa6";
 
-const soacialLinks = [
+const socialLinks = [
   {
     icon: <FaFacebook />,
   },
@@ -88,7 +88,7 @@ const Profile = () => {
     <section className="bg-primary2 text-white/70">
       <MainProfile />
       <div className="flex items-center justify-center py-10 gap-10">
-        {soacialLinks.map((s, idx) => (
+        {socialLinks.map((s, idx) => (
           <span
             key={idx}
             className=" text-xl lg:text-3xl cursor-pointer hover:scale-[1.1] "

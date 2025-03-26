@@ -1,9 +1,9 @@
 import React from "react";
+import Earnings from "./Earnings";
 import TodaySales from "./TodaySales";
 import TopProducts from "./TopProducts";
-import Earnings from "./Earnings";
 
-const Mainboard = () => {
+const MainBoard = () => {
   return (
     <div className="mt-5">
       <TodaySales />
@@ -13,4 +13,4 @@ const Mainboard = () => {
   );
 };
 
-export default Mainboard;
+export default MainBoard;

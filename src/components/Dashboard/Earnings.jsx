@@ -10,7 +10,7 @@ import Percentage from "../chart/gauge";
 
 
 
-const VisitorEnsight = () => {
+const VisitorInsight = () => {
   return (
     <div className="p-4">
       <ContentHeader title="Visitor Insights" />
@@ -48,7 +48,7 @@ const Earnings = () => {
     <div>
       <WrapperDiv reverse>
         <div className=" flex-[1] bg-primary2 rounded-md">
-          <VisitorEnsight />
+          <VisitorInsight />
         </div>
         <div className=" flex-[0.5] bg-primary2 rounded-md">
           <EarningsRate />

@@ -54,11 +54,11 @@ const ButtonGroup = () => {
 
 const Order = () => {
   return (
-    <section className="overflow-hidden" >
+    <section className="overflow-hidden">
       <div className="flex justify-between px-2 py-1 md:py-2 items-center text-white bg-primary2 rounded-md">
         <h1 className="text-xl md:text-2xl font-bold text-grayText">Order</h1>
         <div>
-          <button className="bg-[#341196]/10 border border-blue-700/40 text-blue-500 rounded-md cursor-pointer px-2 py-1.5 md:px-3 md:py-2 rouned-md">
+          <button className="bg-[#341196]/10 border border-blue-700/40 text-blue-500 rounded-md cursor-pointer px-2 py-1.5 md:px-3 md:py-2">
             Create Order
           </button>
         </div>

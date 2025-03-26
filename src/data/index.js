@@ -40,7 +40,7 @@ export const SalesData = [
 export const topProductsData = [
   {
     id: 1,
-    name: "Home Decore Range",
+    name: "Home Decor Range",
     priority: 90,
     color: "#FEB95A",
   },

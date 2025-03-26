@@ -3,6 +3,7 @@ import WrapperDiv from "./WrapperDiv";
 import ContentHeader from "../ContentHeader";
 import { SalesData } from "../../data/index";
 import Bars from "../../assets/Bars.png";
+import ChartGraph from "../chart/chart";
 
 const SalesDetails = () => {
   return (
@@ -41,7 +42,8 @@ const SalesChart = () => {
     <div className="flex-0.2 p-4">
       <ContentHeader title="Level" />
       <div className="w-full h-[120px]" >
-        <img className="w-full h-full" src={Bars} alt="" />
+        {/* <img className="w-full h-full" src={Bars} alt="" /> */}
+        <ChartGraph />
       </div>
       <div className="lg:flex lg:items-center pt-2 mt-2" >
         <button className="flex items-center lg:justify-center gap-2 text-grayText text-[10px] font-medium lg:border-r border-grayText/30 w-full" ><span className="h-2 w-2 rounded-full bg-secondary" ></span>Volume</button>

@@ -2,15 +2,20 @@ import React from "react";
 import WrapperDiv from "./WrapperDiv";
 import ContentHeader from "../ContentHeader";
 import { SalesData } from "../../data/index";
-import Graph2 from "../../assets/Graph2.png";
-import Percentage from "../../assets/Percentage.png";
+import CurveChat from "../chart/curveChart";
+import Percentage from "../chart/gauge";
+
+
+
+
+
 
 const VisitorEnsight = () => {
   return (
     <div className="p-4">
       <ContentHeader title="Visitor Insights" />
       <div className="w-full mt-10">
-        <img src={Graph2} className="w-full object-fit h-full" alt="" />
+        <CurveChat />
       </div>
     </div>
   );
@@ -18,18 +23,23 @@ const VisitorEnsight = () => {
 
 const EarningsRate = () => {
   return (
-    <div className="flex-0.2 p-4 flex items-center md:items-start gap-4 justify-between sm:flex-row md:flex-col">
-      <div>
-        <ContentHeader title="Earnings" des="Total Expense" />
-        <h1 className="text-[20px] text-secondary font-bold my-2">$6078.76</h1>
-        <p className="text-grayText text-[11px] mb-2">
-          Profit is 48% More than last Month
-        </p>
-      </div>
-      <div className="md:w-full">
-        <img className="mt-4 md:mx-auto" src={Percentage} alt="" />
-      </div>
+    <div className="flex flex-col  items-center md:items-start gap-6 p-4 w-full">
+  
+    <div className="w-full md:w-1/2 lg:w-2/5 text-center md:text-left">
+      <ContentHeader title="Earnings" des="Total Expense" />
+      <h1 className="text-[22px] md:text-[24px] lg:text-[26px] text-secondary font-bold my-2">
+        $6078.76
+      </h1>
+      <p className="text-grayText text-[12px] md:text-[14px] ">
+        Profit is 48% More than last Month
+      </p>
     </div>
+  
+    <div className="w-full md:w-1/2 lg:w-3/5 flex items-center mx-auto justify-center">
+      <Percentage />
+    </div>
+  </div>
+  
   );
 };
 

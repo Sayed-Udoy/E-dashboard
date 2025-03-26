@@ -3,6 +3,7 @@ import WrapperDiv from "./WrapperDiv";
 import ContentHeader from "../ContentHeader";
 import Graph from "../../assets/Graph.png";
 import { topProductsData } from "../../data/index";
+import LineGraph from "../chart/lineChart";
 
 const ProductsDetails = () => {
   const tableHead = ["#", "Name", "Popularity", "Sales"];
@@ -57,7 +58,8 @@ const CustomerFulfilment = () => {
     <div className="flex-0.2 p-4">
       <ContentHeader title="Customer Fulfilment" />
       <div className="w-full h-[120px]">
-        <img className="w-full h-full" src={Graph} alt="" />
+        {/* <img className="w-full h-full" src={Graph} alt="" /> */}
+        <LineGraph />
       </div>
       <div className="flex items-center lg:flex lg:items-center justify-between pt-2 mt-2 border-t border-grayText/20 ">
         <div>

@@ -56,9 +56,9 @@ const MonthlyLineChart = () => {
         borderColor: "#4BC0C0",
         backgroundColor: gradient || "rgba(75, 192, 192, 0.2)",
         fill: true,
-        tension: 0.4, // 🔥 More natural wave effect
+        tension: 0.4,
         borderWidth: 3,
-        pointRadius: 5, // Small visible points on peaks
+        pointRadius: 5,
         pointBackgroundColor: "#fff",
         pointBorderColor: "#4BC0C0",
         pointHoverRadius: 7,

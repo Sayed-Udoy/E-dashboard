@@ -49,7 +49,7 @@ const ProductCard = ({ products = [] }) => {
             <img
               src={products[index]?.image || "./product-1.jpg"}
               alt=""
-              className="size-10"
+              className="size-10 rounded-lg"
             />
             <p>{products[index]?.name || `Product ${index + 1}`}</p>
             <p>${products[index]?.price || "0.00"}</p>

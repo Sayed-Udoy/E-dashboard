@@ -4,7 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 
 const ProductCard = ({ products = [] }) => {
   return (
-    <div className="overflow-x-auto min-w-[1050px] flex flex-col">
+    <div className="overflow-x-auto min-w-[1050px] flex flex-col mb-4">
       <div
         className="grid gap-x-4 items-center p-3 bg-primary2 font-medium "
         style={{
@@ -32,7 +32,7 @@ const ProductCard = ({ products = [] }) => {
         {Array.from({ length: products.length || 25 }, (_, index) => (
           <div
             key={index}
-            className="grid gap-x-4 items-center p-3 bg-primary1 hover:bg-primary2 border-b border-grayText/10"
+            className="grid gap-x-4 items-center p-3 bg-primary1 hover:bg-primary2/65 border-b border-grayText/10 cursor-pointer"
             style={{
               gridTemplateColumns: `
               minmax(10px, 20px)
@@ -56,7 +56,7 @@ const ProductCard = ({ products = [] }) => {
             <p>{products[index]?.status || "Active"}</p>
             <div>{products[index]?.permissions || "All"}</div>
             <div className="flex gap-2">
-              <button className="cursor-pointer">
+              <button className="cursor-pointer ">
                 <MdDeleteOutline className="text-red-500/70" size={20} />
               </button>
               <button className="cursor-pointer">

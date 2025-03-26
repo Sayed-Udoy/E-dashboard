@@ -1,4 +1,5 @@
 import React from "react";
+import { CgAdd } from "react-icons/cg";
 import ProductCard from "./product-card";
 
 const demoProducts = Array.from({ length: 30 }, (_, index) => ({
@@ -15,6 +16,13 @@ const demoProducts = Array.from({ length: 30 }, (_, index) => ({
 const Products = () => {
   return (
     <div className="text-gray-200 w-full">
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold  mb-4">Product List</h1>
+        <button className="flex gap-2 items-center border border-grayText/30 px-2 py-1 rounded-md cursor-pointer hover:bg-gray-700 active:scale-90">
+          <CgAdd />
+          <p>Add Product</p>
+        </button>
+      </div>
       <ProductCard products={demoProducts} />
     </div>
   );

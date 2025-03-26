@@ -3,7 +3,6 @@ const Button = ({
   size,
   className,
   children,
-//   onClick,
   ...props
 }) => {
   let baseStyles = "px-2 py-1 rounded-md font-medium transition";
@@ -21,7 +20,6 @@ const Button = ({
 
   return (
     <button
-    //   onClick={()=>onClick()}
       className={`${!className && baseStyles} ${
         variantStyles && !className && variantStyles
       } ${sizeStyles} ${className} cursor-pointer `}

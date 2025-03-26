@@ -51,7 +51,7 @@ const Sidebar = ({ toggleSidebar }) => {
           return (
             <Link
               to={item.link}
-              onClick={() => setIsActive(idx)}
+              // onClick={() => setIsActive(idx)}
               key={item.name}
               className={`flex font-medium px-2 py-2.5 rounded-lg  items-center gap-2 cursor-pointer hover:bg-secondary hover:text-primary1 transition-all duration-200 ${
                 location.pathname === item.link

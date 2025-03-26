@@ -41,13 +41,17 @@ const SalesChart = () => {
   return (
     <div className="flex-0.2 p-4">
       <ContentHeader title="Level" />
-      <div className="w-full h-[120px]" >
+      <div className="w-full h-[120px]">
         {/* <img className="w-full h-full" src={Bars} alt="" /> */}
         <ChartGraph />
       </div>
-      <div className="lg:flex lg:items-center pt-2 mt-2" >
-        <button className="flex items-center lg:justify-center gap-2 text-grayText text-[10px] font-medium lg:border-r border-grayText/30 w-full" ><span className="h-2 w-2 rounded-full bg-secondary" ></span>Volume</button>
-        <button className="flex items-center lg:justify-center gap-2 text-grayText text-[10px] font-medium w-full" ><span className="h-2 w-2 rounded-full bg-grayText" ></span>Service</button>
+      <div className="flex justify-center w-full gap-20 lg:gap-0 items-center pt-2 mt-2">
+        <button className="flex items-center lg:justify-center gap-2 text-grayText text-[10px] font-medium lg:border-r border-grayText/30 lg:w-full">
+          <span className="h-2 w-2 rounded-full bg-secondary"></span>Volume
+        </button>
+        <button className="flex items-center lg:justify-center gap-2 text-grayText text-[10px] font-medium lg:w-full">
+          <span className="h-2 w-2 rounded-full bg-grayText"></span>Service
+        </button>
       </div>
     </div>
   );

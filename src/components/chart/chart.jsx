@@ -1,33 +1,33 @@
-import { Bar } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
   BarElement,
   CategoryScale,
+  Chart as ChartJS,
+  Legend,
   LinearScale,
   Tooltip,
-  Legend,
 } from "chart.js";
+import { Bar } from "react-chartjs-2";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const BarChart = () => {
   const data = {
-    labels: ["A", "B", "C", "D", "E", "F"], 
+    labels: ["A", "B", "C", "D", "E", "F"],
     datasets: [
       {
         label: "Light Section",
-        data: [80, 100, 80, 50, 50, 60], 
+        data: [80, 100, 80, 50, 50, 60],
         backgroundColor: "#A9DFD8",
-        borderRadius: 10, 
-        barThickness: 25, 
+        borderRadius: 10,
+        barThickness: 25,
       },
       {
         label: "Dark Section",
-        data: [70, 90, 70, 70, 55, 35], 
+        data: [70, 90, 70, 70, 55, 35],
         backgroundColor: "#2B2B36",
         hoverBackgroundColor: "#F2C8ED", // 🔥 Hover color red
-        borderRadius: 10, 
-        barThickness: 25, 
+        borderRadius: 10,
+        barThickness: 25,
       },
     ],
   };
@@ -36,13 +36,13 @@ const BarChart = () => {
     responsive: true,
     layout: {
       padding: {
-        bottom: 30, 
+        bottom: 30,
       },
     },
     plugins: {
-      legend: { display: false }, 
+      legend: { display: false },
       tooltip: {
-        enabled: true, 
+        enabled: true,
         callbacks: {
           label: function (tooltipItem) {
             let dataset = tooltipItem.dataset;
@@ -57,13 +57,13 @@ const BarChart = () => {
     scales: {
       x: {
         stacked: true,
-        display: false, 
+        display: false,
         grid: { display: false },
       },
       y: {
         stacked: true,
-        display: false, 
-        grid: { display: false }, 
+        display: false,
+        grid: { display: false },
       },
     },
   };

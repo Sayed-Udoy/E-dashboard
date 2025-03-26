@@ -1,17 +1,24 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
 import {
+  CategoryScale,
   Chart as ChartJS,
+  Filler,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Tooltip,
+} from "chart.js";
+import React, { useEffect, useRef, useState } from "react";
+import { Line } from "react-chartjs-2";
+
+// Register Chart.js components
+ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
   Tooltip,
-  Filler,
-} from "chart.js";
-
-// Register Chart.js components
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Filler);
+  Filler
+);
 
 const MonthlyLineChart = () => {
   const chartRef = useRef(null);
@@ -29,7 +36,20 @@ const MonthlyLineChart = () => {
   }, []);
 
   const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
     datasets: [
       {
         data: [50, 120, 180, 130, 220, 170, 250, 290, 180, 240, 110, 190],
@@ -87,7 +107,7 @@ const MonthlyLineChart = () => {
   };
 
   return (
-    <div className="w-full h-96 p-4 bg-gray-900 rounded-2xl shadow-lg">
+    <div className="w-full h-96 p-4  rounded-2xl shadow-lg">
       <Line ref={chartRef} data={data} options={options} />
     </div>
   );

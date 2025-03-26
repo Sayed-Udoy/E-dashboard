@@ -1,11 +1,28 @@
-import { useState, useEffect, useRef } from "react";
+import {
+  Chart as ChartJS,
+  Filler,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+} from "chart.js";
+import { useEffect, useRef, useState } from "react";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, Tooltip, Legend, Filler } from "chart.js";
 
-ChartJS.register(LineElement, PointElement, LinearScale, Title, Tooltip, Legend, Filler);
+ChartJS.register(
+  LineElement,
+  PointElement,
+  LinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 
 const generateRandomData = (count, min = 60, max = 80, decimals = 2) => {
-  return Array.from({ length: count }, () => 
+  return Array.from({ length: count }, () =>
     (Math.random() * (max - min) + min).toFixed(decimals)
   );
 };
@@ -16,8 +33,12 @@ const getStoredData = (key, defaultValue) => {
 };
 
 const ChartComponent = () => {
-  const [staticData1] = useState(() => getStoredData("chartData1", generateRandomData(8, 40, 80)));
-  const [staticData2] = useState(() => getStoredData("chartData2", generateRandomData(8, 20, 80)));
+  const [staticData1] = useState(() =>
+    getStoredData("chartData1", generateRandomData(8, 40, 80))
+  );
+  const [staticData2] = useState(() =>
+    getStoredData("chartData2", generateRandomData(8, 20, 80))
+  );
 
   const chartRef = useRef(null);
 
@@ -40,8 +61,12 @@ const ChartComponent = () => {
         label: "Dataset 1",
         data: staticData1,
         borderColor: "#F2C8ED",
-        backgroundColor: chartRef.current 
-          ? createGradient(chartRef.current.ctx, "rgba(242,200,237,1)", "rgba(242,200,237,0.1)") 
+        backgroundColor: chartRef.current
+          ? createGradient(
+              chartRef.current.ctx,
+              "rgba(242,200,237,1)",
+              "rgba(242,200,237,0.1)"
+            )
           : "rgba(242,200,237,0.5)",
         fill: "start",
       },
@@ -49,18 +74,22 @@ const ChartComponent = () => {
         label: "Dataset 2",
         data: staticData2,
         borderColor: "#A9DFD8",
-        backgroundColor: chartRef.current 
-          ? createGradient(chartRef.current.ctx, "rgba(169,223,216,1)", "rgba(169,223,216,0.1)") 
+        backgroundColor: chartRef.current
+          ? createGradient(
+              chartRef.current.ctx,
+              "rgba(169,223,216,1)",
+              "rgba(169,223,216,0.1)"
+            )
           : "rgba(169,223,216,0.5)",
         fill: "start",
-      }
-    ]
+      },
+    ],
   };
 
   const options = {
     layout: {
       padding: {
-        bottom: 30, 
+        bottom: 30,
       },
     },
     scales: {
@@ -72,18 +101,18 @@ const ChartComponent = () => {
         ticks: {
           callback: function (value) {
             return value >= 40 && value <= 120 ? "" : value;
-          }
-        }
-      }
+          },
+        },
+      },
     },
     elements: {
-      line: { tension: 0 }
+      line: { tension: 0 },
     },
     plugins: {
-      legend: { display: false }, 
-      filler: { propagate: false }
+      legend: { display: false },
+      filler: { propagate: false },
     },
-    interaction: { intersect: false }
+    interaction: { intersect: false },
   };
 
   return (

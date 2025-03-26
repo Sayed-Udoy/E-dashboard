@@ -1,11 +1,6 @@
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
 
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -36,10 +31,11 @@ const GaugeChart = () => {
   };
 
   return (
-    <div className="relative mx-auto w-[250px] h-[174px]"> {/* ✅ Square Shape (Equal width & height) */}
+    <div className="relative mx-auto w-[250px] h-[174px]">
+      {" "}
+      {/* ✅ Square Shape (Equal width & height) */}
       {/* Gauge Chart */}
       <Doughnut data={data} options={options} />
-
       {/* Percentage Text */}
       <div className="absolute inset-0 flex items-center justify-center text-[25px] font-bold md:mt-10 text-white">
         {percentage}%

@@ -1,14 +1,13 @@
 import React from "react";
-import WrapperDiv from "./WrapperDiv";
-import ContentHeader from "../ContentHeader";
-import Graph from "../../assets/Graph.png";
 import { topProductsData } from "../../data/index";
 import LineGraph from "../chart/lineChart";
+import ContentHeader from "../ContentHeader";
+import WrapperDiv from "./WrapperDiv";
 
 const ProductsDetails = () => {
   const tableHead = ["#", "Name", "Popularity", "Sales"];
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       <ContentHeader title="Top Products" />
       <div className="w-full">
         <div>
@@ -55,9 +54,9 @@ const ProductsDetails = () => {
 
 const CustomerFulfillment = () => {
   return (
-    <div className="flex-0.2 p-4">
+    <div className="w-full p-4">
       <ContentHeader title="Customer Fulfillment" />
-      <div className="w-full h-[120px]">
+      <div className="w-full ">
         {/* <img className="w-full h-full" src={Graph} alt="" /> */}
         <LineGraph />
       </div>

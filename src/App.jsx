@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Route, Routes } from "react-router";
 import Dashboard from "./components/Dashboard/Dashboard";
-import MainBoard from "./components/Dashboard/MainBoard";
+import MainBoard from "./components/Dashboard/Mainboard";
 import Order from "./components/Order/Order";
 import Products from "./components/Products/Products";
 import Profile from "./components/Profile/Profile";

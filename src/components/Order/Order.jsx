@@ -54,7 +54,7 @@ const ButtonGroup = () => {
 
 const Order = () => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden px-2">
       <div className="flex justify-between px-2 py-1 md:py-2 items-center text-white bg-primary2 rounded-md">
         <h1 className="text-xl md:text-2xl font-bold text-grayText">Order</h1>
         <div>
